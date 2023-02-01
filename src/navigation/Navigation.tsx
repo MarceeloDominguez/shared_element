@@ -1,13 +1,13 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-//import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
 import DetailsScreen from "../screens/DetailsScreen";
 import { createSharedElementStackNavigator } from "react-navigation-shared-element";
+import { Data } from "../interfaces/dataInterface";
 
 export type RootStackParams = {
   HomeScreen: undefined;
-  DetailsScreen: {};
+  DetailsScreen: Data;
 };
 
 const Stack = createSharedElementStackNavigator<RootStackParams>();
